@@ -4,13 +4,13 @@ from util import tah
 def vyhodnot(kolo):
     "Tato funkce vyhodnotí výsledek zadaného kola."
     if "xxx" in kolo:
-        return "x"              #vyhrál uživatel
+        return "x"                #vyhrál uživatel
     elif "ooo" in kolo:
-        return "o"              #vyhrál počítač
+        return "o"                #vyhrál počítač
     elif "-" not in kolo:
-        return "!"      #remiza
+        return "!"                #remiza
     else:
-        return "-"      #hrajeme dal
+        return "-"                #hrajeme dal
 
 
 def tah_hrace(pole, symbol):
@@ -24,9 +24,9 @@ def tah_hrace(pole, symbol):
             print("To bohužel nejde.\n")
 
 
-def piskvorky1d():
+def piskvorky1d(velikost):
     "Funkce volá tah hráče a tah počítače, dokud hra neskončí výhrou nebo remízou."
-    akt_pole = 20 * "-"
+    akt_pole = velikost * "-"
     hra = vyhodnot(akt_pole)
     while hra == "-":               # ani vítězství, ani remíza
         akt_pole = tah_hrace(akt_pole, "x")

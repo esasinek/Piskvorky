@@ -20,4 +20,4 @@ Hrajeme!
 print("Hraješ první. Pole je prázdné: --------------------\n")
 
 
-piskvorky.piskvorky1d()
+piskvorky.piskvorky1d(20)

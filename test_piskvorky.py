@@ -1,4 +1,6 @@
 from piskvorky import piskvorky1d, tah_hrace, vyhodnot
+from ai import tah_pocitace
+from util import tah
 import pytest
 
 
@@ -24,7 +26,13 @@ def test_tah_chyba():
 
 
 def test_delky_pole():
+    # pole =
     assert len(pole) == 20
+
+
+def test_ruzne_delky_pole():
+    pole = "-x-xox"
+    assert tah_pocitace == "-xoxox"
 
 
 # def tah_hrace(pole, symbol):
