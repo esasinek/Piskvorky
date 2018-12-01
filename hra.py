@@ -13,11 +13,16 @@ Hráči střídavě přidávají kolečka (`o`) a křížky (`x`), třeba:
 
 Hráč, která dá tři své symboly vedle sebe, vyhrál.
 
-Budeš hrát proti počítači. Ty máš symbol 'x', počítač 'o'.
-
-Hrajeme!
+Budeš hrát proti počítači.
 """)
-print("Hraješ první. Pole je prázdné: --------------------\n")
 
-
-piskvorky.piskvorky1d(20)
+while True:
+    symbol_hrace = input("Jakým chceš hrát symbolem?")
+    if symbol_hrace == "x" or symbol_hrace == "o":
+        print("Super. Hrajeme!")
+        print("Hraješ první. Pole je prázdné: --------------------\n")
+        piskvorky.piskvorky1d(20, symbol_hrace)
+    elif symbol_hrace == "konec":
+        break
+    else:
+        print("To nejde. Vyber si symbol 'x' nebo 'o'.")
